@@ -1,0 +1,175 @@
+.container {
+display: flex;
+ justify-content: space-between;
+ width: 100%;
+ margin: 20px auto;
+ flex-wrap: wrap;
+}
+body {
+
+    width: 100%;
+    margin: 0;
+    background: url('img/scale_1200.jfif') no-repeat center;
+    height: 100%;
+    color: #FFFFFF;
+    }
+
+.card1{
+  width: 33.3%;
+  max-width: 420px;
+
+ padding: 0px;
+    margin: auto;
+    border: none;
+}
+.topik {
+    padding-left: 250px;
+    margin-top: auto;
+
+}
+.card1__image {
+ height: 120px;
+ background-color: #a2a2a2;
+ margin: auto;
+}
+.card1__description{
+margin-top: 0;
+    margin-bottom: 0;
+ text-align: center;
+     text-align: justify;
+ font-size: 20px;
+}
+@media screen  and (max-width: 768px) {
+
+.card1 {
+    width: 50%;
+     max-width: 100%;
+     margin: auto auto 10px;
+    }
+    .card1{
+        width: 95%;
+        border: none;
+    }
+
+}
+@media screen  and (max-width: 768px) {
+    .card1{
+        width: 95%;
+    }
+}
+
+/* Стили для родительского
+блока */
+.card {
+    width: 300px;
+    height: 450px;
+    margin: 0 auto;
+    position: relative; /*     относительное     позиционирование     родительского элемента, чтобы
+    дочерние .product,     .description располагать     внутри card */
+    border: none;
+}
+.product, .description{
+    width: 100%; /* ширина 100% родителя */
+    height: 100%; /* высота 100% родителя */
+    position: absolute; /* абсолютное позиционирование элементов внутри родителя с классом card */
+    left: 0; /* координата позиционирования слева 0px*/
+    top: 0; /* координата позиционирования сверху 0px */
+    text-align: center;
+    background-color: #3300CC; /* Стили для кнопки описательного блока карточки товара */
+    backface-visibility: hidden;
+    font-size: 20px;
+}
+.button-order {
+all: unset;
+Padding: 16px 55px;
+background: white;
+border-radius: 15px;
+border: 5px solid blue;
+color: black;
+font-weight: 600;
+font-size: 16px;
+    line-height: 19px;
+text-decoration: none;
+margin-left: 350px;}
+
+.button1-order {
+all: unset;
+Padding: 16px 55px;
+background: white;
+border-radius: 15px;
+border: 5px solid blue;
+color: black;
+font-weight: 600;
+font-size: 16px;
+    line-height: 19px;
+text-decoration: none;
+margin-right: 550px;}
+
+    .description a{
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 30px;
+    text-decoration: none ;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #0099FF ;
+}
+.description{
+    box-sizing: border-box;
+    padding: 40px;
+    transform: rotateY(180deg);
+}
+
+.card:hover.product {
+    transform: rotateY(180deg); /*  разворачиваем блок с изображением     на 180 градусов */
+    }
+.card:hover .description {
+    transform: rotateY(360deg); /*возвращаем блок*/
+    }
+
+.link {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2rem;
+    background-color:
+    #1e88e5;
+    border-radius: 5px;
+    color: #000080;
+    padding: 15px 25px;
+    transition: all 0.8s ease 0s;
+
+    }
+.link:hover {
+    background-color: #e53935;
+    }
+#callback {
+    width: 300px;
+    height: 150px;
+    background-color: grey;
+    position: absolute;
+    bottom: 30px;
+    transform: translateX(-100%);
+     }
+#callback p {
+    color: #fff;
+    padding: 22px;
+    }
+#callback:after {
+    content: 'Для чего нужен квантовый компьютер?';
+    background-color: #6633FF;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+    width: 150px; /* ширина псевдоэлемента равна высоте  блока*/
+    position: absolute; /* позиционирование абсолютное  */
+    left: 300px; /* позиция слева равен ширине блока   #callback */
+    transform: rotate(-90deg);
+    transform-origin: 0 0;
+    }
+#callback:hover {
+    transform: translateX(0%);
+    transition: all 0.7s ease;
+    }
+button {
+    margin-left: 100px;
+}
